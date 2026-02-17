@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-off-white: #f5f5f7;
+  --color-deep-black: #1d1d1f;
+  --color-link-blue: #0066cc;
+
+  --font-family-sans: var(--font-inter), system-ui, sans-serif;
+  --font-family-serif: var(--font-playfair), Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-off-white text-deep-black antialiased;
+  }
+}
