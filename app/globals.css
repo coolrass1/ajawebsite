@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-off-white: #f5f5f7;
-  --color-deep-black: #1d1d1f;
-  --color-link-blue: #0066cc;
+  --color-off-white: #FAFAF7;
+  --color-deep-black: #0a0a14;
+  --color-accent: #c5a367;
+  --color-accent-light: #d4bc8d;
+  --color-navy-dark: #0a0a14;
+  --color-navy-light: #151525;
+  --color-soft-white: #fafafa;
+  --color-muted: #86868B;
+  --color-border: #E8E8ED;
+  --color-surface: #F2F2F0;
 
   --font-family-sans: var(--font-inter), system-ui, sans-serif;
-  --font-family-serif: var(--font-playfair), Georgia, serif;
+  --font-family-serif: var(--font-cormorant), Georgia, serif;
 }
 
 @layer base {
@@ -16,5 +23,18 @@
 
   body {
     @apply bg-off-white text-deep-black antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: #B09164;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

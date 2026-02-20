@@ -11,13 +11,20 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'off-white': '#f5f5f7',
-        'deep-black': '#1d1d1f',
-        'link-blue': '#0066cc',
+        'off-white': '#FAFAF7',
+        'deep-black': '#0a0a14', // Updated to Dark Navy
+        'accent': '#c5a367',     // Updated to Gold/Bronze
+        'accent-light': '#d4bc8d',
+        'navy-dark': '#0a0a14',
+        'navy-light': '#151525',
+        'soft-white': '#fafafa',
+        'muted': '#86868B',
+        'border': '#E8E8ED',
+        'surface': '#F2F2F0',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-playfair)', 'Georgia', 'serif'],
+        serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

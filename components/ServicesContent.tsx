@@ -184,8 +184,8 @@ export default function ServicesContent() {
     return (
         <>
             {/* Services List */}
-            <section className="py-20 md:py-32 px-6 md:px-12">
-                <div className="max-w-[1440px] mx-auto">
+            <section className="py-24 md:py-40 px-6 md:px-12">
+                <div className="max-w-[1360px] mx-auto">
                     <div className="space-y-12">
                         {services.map((service, index) => (
                             <motion.div
@@ -194,28 +194,28 @@ export default function ServicesContent() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.5, delay: 0.05 }}
-                                className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                                transition={{ duration: 0.4, delay: 0.04 }}
+                                className="group bg-white rounded-xl border border-border overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             >
                                 <div className="p-8 md:p-12">
                                     <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
                                         {/* Left: Icon, Title, Description */}
                                         <div className="lg:w-1/2">
                                             <div className="flex items-start gap-4 mb-4">
-                                                <div className="flex-shrink-0 p-3 bg-link-blue/10 rounded-xl text-link-blue">
+                                                <div className="flex-shrink-0 p-3 bg-accent/10 rounded-xl text-accent">
                                                     <service.icon size={28} strokeWidth={1.5} />
                                                 </div>
                                                 <div>
-                                                    <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
+                                                    <span className="text-xs font-medium text-accent uppercase tracking-wider">
                                                         {String(index + 1).padStart(2, '0')}
                                                     </span>
-                                                    <h2 className="text-2xl md:text-3xl font-serif font-bold text-deep-black">
+                                                    <h2 className="text-2xl md:text-3xl font-serif font-semibold text-deep-black tracking-[-0.02em]">
                                                         {service.title}
                                                     </h2>
                                                 </div>
                                             </div>
-                                            <p className="text-link-blue font-medium mb-4">{service.tagline}</p>
-                                            <p className="text-gray-600 leading-relaxed">{service.description}</p>
+                                            <p className="text-muted italic mb-4">{service.tagline}</p>
+                                            <p className="text-muted leading-relaxed">{service.description}</p>
                                         </div>
 
                                         {/* Right: Details List */}
@@ -225,8 +225,8 @@ export default function ServicesContent() {
                                             </h3>
                                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                                 {service.details.map((detail) => (
-                                                    <li key={detail} className="flex items-start gap-2 text-sm text-gray-600">
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-link-blue mt-1.5 flex-shrink-0" />
+                                                    <li key={detail} className="flex items-start gap-2 text-sm text-muted">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
                                                         {detail}
                                                     </li>
                                                 ))}
@@ -241,32 +241,32 @@ export default function ServicesContent() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 md:py-32 px-6 md:px-12 bg-deep-black text-white">
-                <div className="max-w-[1440px] mx-auto text-center">
+            <section className="py-24 md:py-40 px-6 md:px-12 bg-deep-black text-white">
+                <div className="max-w-[1360px] mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                     >
-                        <p className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4">Free Advice</p>
-                        <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">
+                        <p className="text-accent font-medium tracking-[0.2em] uppercase text-[13px] mb-4">Free Advice</p>
+                        <h2 className="text-3xl md:text-5xl font-serif font-semibold tracking-[-0.03em] mb-6">
                             Need legal advice?
                         </h2>
-                        <p className="text-xl text-white/60 max-w-2xl mx-auto mb-10">
+                        <p className="text-xl text-white/50 max-w-2xl mx-auto mb-10">
                             Please call to discuss your matter in general. We offer free initial basic advice without any obligation. Clear cost estimates with affordable payment plans.
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link
                                 href="/contact"
-                                className="group px-8 py-4 bg-link-blue text-white rounded-full text-lg font-medium flex items-center gap-2 hover:bg-link-blue/90 transition-all"
+                                className="group px-8 py-4 bg-accent text-white rounded-lg text-lg font-medium flex items-center gap-2 hover:-translate-y-px transition-transform"
                             >
                                 Request a Free Consultation
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <a
                                 href="tel:+442083455678"
-                                className="group px-8 py-4 border border-white/20 rounded-full text-lg font-medium flex items-center gap-2 text-white/80 hover:border-link-blue hover:text-link-blue transition-all"
+                                className="group px-8 py-4 border border-white/15 rounded-lg text-lg font-medium flex items-center gap-2 text-white/70 hover:text-white hover:border-white/30 transition-all"
                             >
                                 <Phone className="w-4 h-4" />
                                 +44 20 8345 5678

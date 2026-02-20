@@ -1,10 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { Section } from './ui/Section';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
 
 const team = [
     {
@@ -38,13 +36,13 @@ export default function Team() {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4"
+                    transition={{ duration: 0.3 }}
+                    className="text-muted font-medium tracking-[0.2em] uppercase text-[13px] mb-4"
                 >
                     Meet Our Team
                 </motion.p>
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-black mb-6">Our Partners</h2>
-                <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+                <h2 className="text-4xl md:text-5xl font-serif font-semibold text-deep-black tracking-[-0.03em] mb-6">Our Partners</h2>
+                <p className="text-xl text-muted max-w-2xl mx-auto">
                     Distinguished legal minds with decades of combined experience, committed to protecting your interests and achieving the best possible outcomes.
                 </p>
             </div>
@@ -56,42 +54,26 @@ export default function Team() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
+                        transition={{ duration: 0.4, delay: index * 0.1 }}
                         className="group"
                     >
-                        <div className="relative overflow-hidden rounded-lg mb-6 aspect-[3/4]">
+                        <div className="relative overflow-hidden rounded-lg mb-6 aspect-[4/5]">
                             <Image
                                 src={member.image}
                                 alt={member.name}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                className="object-cover transition-all duration-700 group-hover:brightness-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                                 <p className="text-white text-sm opacity-90">{member.bio}</p>
                             </div>
                         </div>
-                        <h3 className="text-2xl font-serif font-medium text-deep-black">{member.name}</h3>
-                        <p className="text-link-blue font-medium mt-1">{member.role}</p>
-                        <p className="text-gray-500 text-sm mt-1">{member.specialty}</p>
+                        <h3 className="text-2xl font-serif font-normal text-deep-black">{member.name}</h3>
+                        <p className="text-accent font-medium mt-1">{member.role}</p>
+                        <p className="text-muted text-sm mt-1">{member.specialty}</p>
                     </motion.div>
                 ))}
             </div>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mt-16 text-center"
-            >
-                <Link
-                    href="/about"
-                    className="group inline-flex items-center gap-2 px-8 py-4 border border-deep-black/20 rounded-full text-lg font-medium text-deep-black/80 hover:border-link-blue hover:text-link-blue transition-all"
-                >
-                    More About Our Firm
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-            </motion.div>
         </Section>
     );
 }

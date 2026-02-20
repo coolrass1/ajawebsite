@@ -17,7 +17,7 @@ export default function ContactForm() {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-off-white/50 text-deep-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-link-blue/30 focus:border-link-blue transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white text-deep-black placeholder-muted focus:outline-none focus:border-deep-black transition-colors"
                     placeholder="Your full name"
                 />
             </div>
@@ -31,7 +31,7 @@ export default function ContactForm() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-off-white/50 text-deep-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-link-blue/30 focus:border-link-blue transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white text-deep-black placeholder-muted focus:outline-none focus:border-deep-black transition-colors"
                     placeholder="your@email.com"
                 />
             </div>
@@ -44,7 +44,7 @@ export default function ContactForm() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-off-white/50 text-deep-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-link-blue/30 focus:border-link-blue transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white text-deep-black placeholder-muted focus:outline-none focus:border-deep-black transition-colors"
                     placeholder="+44 ..."
                 />
             </div>
@@ -57,7 +57,7 @@ export default function ContactForm() {
                     id="subject"
                     name="subject"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-off-white/50 text-deep-black focus:outline-none focus:ring-2 focus:ring-link-blue/30 focus:border-link-blue transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white text-deep-black focus:outline-none focus:border-deep-black transition-colors"
                 >
                     <option value="">Select a subject...</option>
                     <option value="divorce-family">Divorce & Family Law</option>
@@ -84,7 +84,7 @@ export default function ContactForm() {
                     name="message"
                     required
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 bg-off-white/50 text-deep-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-link-blue/30 focus:border-link-blue transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-lg border border-border bg-white text-deep-black placeholder-muted focus:outline-none focus:border-deep-black transition-colors resize-none"
                     placeholder="Please describe how we can help you..."
                 />
             </div>
@@ -95,17 +95,17 @@ export default function ContactForm() {
                     id="terms"
                     checked={agreed}
                     onChange={(e) => setAgreed(e.target.checked)}
-                    className="mt-1 w-4 h-4 rounded border-gray-300 text-link-blue focus:ring-link-blue"
+                    className="mt-1 w-4 h-4 rounded border-border text-accent focus:ring-accent"
                 />
-                <label htmlFor="terms" className="text-sm text-gray-500">
-                    I have read and accept the <a href="#" className="text-link-blue hover:underline">terms and conditions</a> and understand that this form does not create a solicitor-client relationship. <span className="text-red-500">*</span>
+                <label htmlFor="terms" className="text-sm text-muted">
+                    I have read and accept the <a href="#" className="text-accent hover:underline">terms and conditions</a> and understand that this form does not create a solicitor-client relationship. <span className="text-red-500">*</span>
                 </label>
             </div>
 
             <button
                 type="submit"
                 disabled={!agreed}
-                className="group w-full px-8 py-4 bg-link-blue text-white rounded-full text-lg font-medium flex items-center justify-center gap-2 hover:bg-link-blue/90 transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-link-blue"
+                className="group w-full px-8 py-4 bg-accent text-white rounded-lg text-lg font-medium flex items-center justify-center gap-2 hover:-translate-y-px transition-transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >
                 Send Enquiry
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

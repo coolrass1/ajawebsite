@@ -56,18 +56,18 @@ export default function AboutContent() {
     return (
         <>
             {/* Introduction */}
-            <section className="py-20 md:py-32 px-6 md:px-12">
-                <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <section className="py-24 md:py-40 px-6 md:px-12">
+                <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-deep-black mb-6">
+                        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-deep-black tracking-[-0.03em] mb-6">
                             Comprehensive Legal Services with a Personal Touch
                         </h2>
-                        <div className="space-y-4 text-gray-600 leading-relaxed">
+                        <div className="space-y-4 text-muted leading-relaxed">
                             <p>
                                 AJ Angelo Solicitors offers a comprehensive range of legal services, combining old values with new ideas. We are specialists in property and litigation matters, with deep expertise across family law, employment, wills, and commercial disputes.
                             </p>
@@ -84,7 +84,7 @@ export default function AboutContent() {
                         initial={{ opacity: 0, x: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.5, delay: 0.12 }}
                         className="grid grid-cols-2 gap-6"
                     >
                         {stats.map((stat, index) => (
@@ -93,11 +93,11 @@ export default function AboutContent() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: 0.1 * index }}
-                                className="bg-white p-8 rounded-2xl border border-gray-100 text-center"
+                                transition={{ duration: 0.4, delay: 0.06 * index }}
+                                className="bg-white p-8 rounded-xl shadow-sm text-center"
                             >
-                                <p className="text-4xl md:text-5xl font-bold text-link-blue mb-2">{stat.value}</p>
-                                <p className="text-gray-500 text-sm font-medium">{stat.label}</p>
+                                <p className="text-4xl md:text-5xl font-bold text-accent mb-2">{stat.value}</p>
+                                <p className="text-muted text-sm font-medium">{stat.label}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -105,18 +105,18 @@ export default function AboutContent() {
             </section>
 
             {/* Our Approach */}
-            <section className="py-20 md:py-32 px-6 md:px-12 bg-white">
-                <div className="max-w-[1440px] mx-auto">
+            <section className="py-24 md:py-40 px-6 md:px-12 bg-white">
+                <div className="max-w-[1360px] mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                         className="mb-16"
                     >
-                        <p className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4">How We Work</p>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-deep-black mb-6">Our Approach</h2>
-                        <p className="text-xl text-gray-500 max-w-2xl">
+                        <p className="text-muted font-medium tracking-[0.2em] uppercase text-[13px] mb-4">How We Work</p>
+                        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-deep-black tracking-[-0.03em] mb-6">Our Approach</h2>
+                        <p className="text-xl text-muted max-w-2xl">
                             We encourage amicable resolution, viewing litigation as a last resort. When clients come to us, they have often reached an impasse &mdash; and we help them find the way forward.
                         </p>
                     </motion.div>
@@ -128,14 +128,14 @@ export default function AboutContent() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-8 rounded-xl bg-off-white/50 border border-gray-100"
+                                transition={{ duration: 0.4, delay: index * 0.06 }}
+                                className="p-8 rounded-xl bg-white shadow-sm"
                             >
-                                <div className="mb-6 inline-block p-4 bg-white rounded-full text-link-blue">
+                                <div className="mb-6 text-accent">
                                     <value.icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-xl font-serif font-semibold text-deep-black mb-3">{value.title}</h3>
-                                <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                                <p className="text-muted leading-relaxed">{value.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -143,18 +143,18 @@ export default function AboutContent() {
             </section>
 
             {/* Our Advantages */}
-            <section className="py-20 md:py-32 px-6 md:px-12 bg-deep-black text-white">
-                <div className="max-w-[1440px] mx-auto">
+            <section className="py-24 md:py-40 px-6 md:px-12 bg-deep-black text-white">
+                <div className="max-w-[1360px] mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.4 }}
                         className="mb-16 text-center"
                     >
-                        <p className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4">Why Choose Us</p>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Our Advantages</h2>
-                        <p className="text-xl text-white/60 max-w-2xl mx-auto">
+                        <p className="text-accent font-medium tracking-[0.2em] uppercase text-[13px] mb-4">Why Choose Us</p>
+                        <h2 className="text-3xl md:text-4xl font-serif font-semibold tracking-[-0.03em] mb-6">Our Advantages</h2>
+                        <p className="text-xl text-white/50 max-w-2xl mx-auto">
                             We combine decades of experience with a client-first approach to deliver results that matter.
                         </p>
                     </motion.div>
@@ -166,14 +166,14 @@ export default function AboutContent() {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm text-center"
+                                transition={{ duration: 0.4, delay: index * 0.06 }}
+                                className="p-8 rounded-xl bg-white/[0.04] text-center"
                             >
-                                <div className="mb-4 inline-block p-4 bg-link-blue/20 rounded-full">
-                                    <adv.icon size={28} className="text-link-blue" strokeWidth={1.5} />
+                                <div className="mb-4 inline-block">
+                                    <adv.icon size={28} className="text-accent" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-lg font-semibold text-white mb-3">{adv.title}</h3>
-                                <p className="text-white/60 text-sm leading-relaxed">{adv.description}</p>
+                                <p className="text-white/50 text-sm leading-relaxed">{adv.description}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -181,17 +181,17 @@ export default function AboutContent() {
             </section>
 
             {/* Complaints Procedure */}
-            <section className="py-20 md:py-32 px-6 md:px-12 bg-white">
-                <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <section className="py-24 md:py-40 px-6 md:px-12 bg-surface">
+                <div className="max-w-[1360px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <p className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4">Transparency</p>
-                        <h2 className="text-3xl md:text-4xl font-serif font-bold text-deep-black mb-6">Complaints Procedure</h2>
-                        <div className="space-y-4 text-gray-600 leading-relaxed">
+                        <p className="text-muted font-medium tracking-[0.2em] uppercase text-[13px] mb-4">Transparency</p>
+                        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-deep-black tracking-[-0.03em] mb-6">Complaints Procedure</h2>
+                        <div className="space-y-4 text-muted leading-relaxed">
                             <p>
                                 We are committed to providing a high-quality legal service. If something goes wrong, we want to know about it so we can resolve it promptly and learn from any mistakes.
                             </p>
@@ -202,16 +202,16 @@ export default function AboutContent() {
                                 If we are unable to resolve your complaint to your satisfaction, you may refer it to the Legal Ombudsman. The Legal Ombudsman investigates problems that clients have experienced with lawyers.
                             </p>
                         </div>
-                        <div className="mt-6 p-6 bg-off-white rounded-xl border border-gray-100">
+                        <div className="mt-6 p-6 bg-white rounded-xl">
                             <p className="text-sm font-semibold text-deep-black mb-2">Legal Ombudsman</p>
-                            <p className="text-sm text-gray-500">Phone: 0300 555 0333</p>
-                            <p className="text-sm text-gray-500">
+                            <p className="text-sm text-muted">Phone: 0300 555 0333</p>
+                            <p className="text-sm text-muted">
                                 Website:{' '}
                                 <a
                                     href="https://www.legalombudsman.org.uk"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-link-blue hover:underline inline-flex items-center gap-1"
+                                    className="text-accent hover:underline inline-flex items-center gap-1"
                                 >
                                     www.legalombudsman.org.uk
                                     <ExternalLink size={12} />
@@ -225,27 +225,27 @@ export default function AboutContent() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.5, delay: 0.12 }}
                         className="flex items-center"
                     >
-                        <div className="bg-off-white rounded-2xl p-10 md:p-14 w-full">
-                            <h3 className="text-2xl md:text-3xl font-serif font-bold text-deep-black mb-4">
+                        <div className="bg-surface rounded-xl p-10 md:p-14 w-full border border-border">
+                            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-deep-black tracking-[-0.02em] mb-4">
                                 Ready to discuss your legal matter?
                             </h3>
-                            <p className="text-gray-600 mb-8 leading-relaxed">
+                            <p className="text-muted mb-8 leading-relaxed">
                                 Get in touch today for a free initial consultation. Our experienced team will listen to your situation and advise on the best course of action.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <Link
                                     href="/contact"
-                                    className="group px-8 py-4 bg-link-blue text-white rounded-full text-lg font-medium flex items-center justify-center gap-2 hover:bg-link-blue/90 transition-all"
+                                    className="group px-8 py-4 bg-accent text-white rounded-lg text-lg font-medium flex items-center justify-center gap-2 hover:-translate-y-px transition-transform"
                                 >
                                     Contact Us
                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                                 <a
                                     href="tel:+442083455678"
-                                    className="px-8 py-4 border border-deep-black/20 rounded-full text-lg font-medium text-deep-black/80 hover:border-link-blue hover:text-link-blue transition-all text-center"
+                                    className="px-8 py-4 border border-deep-black/15 rounded-lg text-lg font-medium text-deep-black/80 hover:-translate-y-px transition-all text-center"
                                 >
                                     +44 20 8345 5678
                                 </a>

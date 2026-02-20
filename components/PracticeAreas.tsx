@@ -10,148 +10,173 @@ const practices = [
         icon: Users,
         title: "Divorce & Family Law",
         href: "/services#divorce-family-law",
-        description: "Separation isn't easy. Family breakdowns can be one of the hardest experiences. We provide compassionate, expert guidance through complex family transitions and matrimonial matters."
+        description: "Compassionate guidance through matrimonial matters and family transitions."
     },
     {
         icon: Home,
         title: "Residential Property",
         href: "/services#residential-property",
-        description: "Comprehensive support for residential purchases and sales, ensuring your property transactions proceed smoothly from start to completion."
+        description: "Expert support for residential purchases, sales, and landlord-tenant disputes."
     },
     {
         icon: Building2,
         title: "Commercial Property",
         href: "/services#commercial-property",
-        description: "Expert legal assistance for commercial property purchases, sales, and lease negotiations for businesses of all sizes."
+        description: "Legal assistance for commercial purchases, sales, and lease negotiations."
     },
     {
         icon: Shield,
         title: "Employment Claims",
         href: "/services#employment-claims",
-        description: "Protecting your rights in the workplace with strategic legal representation for unfair dismissal, discrimination, and contractual disputes."
+        description: "Protecting employee rights in disputes, discrimination, and contract issues."
     },
     {
         icon: Landmark,
         title: "Inheritance Act Claims",
         href: "/services#inheritance-claims",
-        description: "Specialist advice on contested estates and claims under the Inheritance Act, ensuring fair provision for dependants."
+        description: "Specialist advice on contested estates and fair provision for dependants."
     },
     {
         icon: AlertTriangle,
-        title: "Bankruptcy & Insolvency",
+        title: "Insolvency",
         href: "/services#bankruptcy-insolvency",
-        description: "Navigating financial distress with practical solutions for individuals and businesses facing insolvency proceedings."
+        description: "Practical solutions for individuals and businesses facing financial distress."
     },
     {
         icon: Gavel,
         title: "Professional Negligence",
         href: "/services#professional-negligence",
-        description: "Holding professionals to account when their negligence causes you financial loss or other harm."
+        description: "Holding professionals accountable for negligence causing financial loss."
     },
     {
         icon: Briefcase,
         title: "Business Disputes",
         href: "/services#business-disputes",
-        description: "Commercial and contractual dispute resolution for partnership disagreements, shareholder disputes, and breach of contract."
+        description: "Contractual and commercial dispute resolution for businesses of all sizes."
     },
     {
         icon: Scale,
         title: "Wills & Estate Planning",
         href: "/services#wills-estate-planning",
-        description: "We are experts in Wills, Trusts, and Probate services. Planning your legacy and navigating estate administration with precision and care."
+        description: "Expertise in Wills, Trusts, and precise estate administration."
     },
     {
         icon: BadgePoundSterling,
         title: "Debt Recovery",
         href: "/services#debt-recovery",
-        description: "Effective strategies for recovering outstanding debts, from initial demand through to enforcement proceedings."
+        description: "Effective strategies for recovering outstanding commercial and personal debts."
     },
     {
         icon: FileText,
-        title: "Landlord & Tenant Disputes",
-        href: "/services#landlord-tenant",
-        description: "Resolving residential and commercial landlord-tenant disputes including evictions, rent arrears, and disrepair claims."
+        title: "Litigation Specialists",
+        href: "/services#litigation",
+        description: "Meticulous case preparation for complex litigation across all sectors."
     },
 ];
 
 export default function PracticeAreas() {
     return (
-        <Section id="practice-areas" className="bg-white">
-            <div className="mb-16 md:mb-24">
+        <section id="practice-areas" className="bg-white">
+            <div className="py-20 text-center">
                 <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-link-blue font-medium tracking-widest uppercase text-sm mb-4"
+                    transition={{ duration: 0.3 }}
+                    className="text-[11px] font-bold uppercase tracking-[0.2em] text-deep-black/60 mb-4"
                 >
-                    Our Services
+                    Our Practice Areas
                 </motion.p>
+                <div className="flex justify-center mb-6">
+                    <div className="h-px w-24 bg-accent" />
+                </div>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    className="text-4xl md:text-5xl font-serif font-bold text-deep-black mb-6"
+                    transition={{ duration: 0.4 }}
+                    className="text-4xl md:text-5xl font-serif font-bold text-deep-black mb-4"
                 >
-                    Areas of Practice
+                    Specialized Expertise. Meticulous Execution.
                 </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-xl text-gray-500 max-w-2xl"
-                >
-                    We provide expert legal assistance across eleven specialist practice areas, delivering clear and practical advice.
-                </motion.p>
-                <motion.div
-                    initial={{ opacity: 0, width: 0 }}
-                    whileInView={{ opacity: 1, width: 64 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="h-1 bg-link-blue mt-6"
-                />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {practices.map((practice, index) => (
-                    <Link key={practice.title} href={practice.href}>
+            <div className="flex flex-col md:flex-row min-h-[500px]">
+                {/* Property Law */}
+                <motion.div
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="flex-1 bg-[#c5a367]/30 p-12 md:p-20 flex flex-col items-center justify-center text-center"
+                >
+                    <div className="w-24 h-24 mb-8 flex items-center justify-center">
+                        <Home className="w-16 h-16 text-deep-black" strokeWidth={1} />
+                    </div>
+                    <h3 className="text-3xl font-serif font-bold text-deep-black mb-6 uppercase tracking-wider">Property Law</h3>
+                    <p className="text-lg text-deep-black/70 max-w-sm mb-10 leading-relaxed">
+                        Precision in residential and commercial property matters. Delivering results with old values and new ideas.
+                    </p>
+                    <Link
+                        href="/services#property"
+                        className="group inline-flex items-center gap-3 px-10 py-4 bg-deep-black text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-deep-black/90 transition-all shadow-xl"
+                    >
+                        Explore Property <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </motion.div>
+
+                {/* Litigation */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className="flex-1 bg-[#0a0a14] p-12 md:p-20 flex flex-col items-center justify-center text-center"
+                >
+                    <div className="w-24 h-24 mb-8 flex items-center justify-center">
+                        <Scale className="w-16 h-16 text-accent" strokeWidth={1} />
+                    </div>
+                    <h3 className="text-3xl font-serif font-bold text-white mb-6 uppercase tracking-wider">Litigation & Disputes</h3>
+                    <p className="text-lg text-white/70 max-w-sm mb-10 leading-relaxed">
+                        Meticulous preparation for every case. Committed to excellence in litigating our client's interests.
+                    </p>
+                    <Link
+                        href="/services#litigation"
+                        className="group inline-flex items-center gap-3 px-10 py-4 bg-accent text-white text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-accent-light transition-all shadow-xl"
+                    >
+                        Explore Litigation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                </motion.div>
+            </div>
+
+            <div className="py-24 max-w-[1360px] mx-auto px-6 md:px-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {practices.map((practice, index) => (
                         <motion.div
-                            initial={{ opacity: 0, y: 30 }}
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.05 }}
-                            className="group p-8 border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-300 bg-off-white/30 rounded-xl cursor-pointer h-full"
+                            transition={{ duration: 0.4, delay: index * 0.1 }}
+                            className="p-8 border border-gray-100 hover:border-accent/30 hover:shadow-xl transition-all group"
                         >
-                            <div className="mb-6 inline-block p-4 bg-white rounded-full text-deep-black group-hover:bg-link-blue group-hover:text-white transition-colors duration-300">
-                                <practice.icon size={28} strokeWidth={1.5} />
+                            <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
+                                <practice.icon className="w-6 h-6 text-accent group-hover:text-white transition-colors" />
                             </div>
-                            <h3 className="text-2xl font-serif font-semibold text-deep-black mb-3">{practice.title}</h3>
-                            <p className="text-gray-600 leading-relaxed mb-4">{practice.description}</p>
-                            <span className="text-link-blue text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                                Learn more <ArrowRight size={14} />
-                            </span>
+                            <h4 className="text-xl font-serif font-bold text-deep-black mb-4">{practice.title}</h4>
+                            <p className="text-sm text-deep-black/60 leading-relaxed mb-6">
+                                {practice.description}
+                            </p>
+                            <Link
+                                href={practice.href}
+                                className="text-[10px] font-bold uppercase tracking-widest text-accent flex items-center gap-2 hover:gap-3 transition-all"
+                            >
+                                Learn More <ArrowRight className="w-3 h-3" />
+                            </Link>
                         </motion.div>
-                    </Link>
-                ))}
+                    ))}
+                </div>
             </div>
-
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="mt-16 text-center"
-            >
-                <Link
-                    href="/services"
-                    className="group inline-flex items-center gap-2 px-8 py-4 bg-deep-black text-white rounded-full text-lg font-medium hover:bg-deep-black/90 transition-all"
-                >
-                    View All Services
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-            </motion.div>
-        </Section>
+        </section>
     );
 }
